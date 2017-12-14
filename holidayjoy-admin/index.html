@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>HolidayJoy</title>
+      <!--style sheet-->
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzaQIiRxuypRmBLiUBjiFgTPNb7OTzZeg&callback=initMap"
+  type="text/javascript"></script>
+        
+
+      <link href="css/style.css" rel="stylesheet"/>
+      <link href="controllers/details/details.css" rel="stylesheet"/>
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="angular-ui-carousel/angular-ui-carousel/dist/ui-carousel.css" rel="stylesheet"/>
+      <link href="angular-ui-carousel/angular-ui-carousel/dist/ui-carousel.min.css" rel="stylesheet"/>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+      
+      <!--style sheet ends-->
+
+      <!--script-->
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+        
+        <script src="module/module.js"></script>
+        <script src="module/route.js"></script>
+         <script src="module/app.js"></script>
+        <script src="controllers/details/details_ctrl.js"></script>
+        <script src="directives/rating.js"></script>
+        <script src="directives/search.js"></script>
+        
+    </head>
+    <body ng-app="holidayjoy" ng-controller="holidaycontroller" style="margin:0px">
+         <div class="topnav" id="myTopnav">
+              <a class="homeactive">Home</a>
+              <div style="float:right">
+                  <a>Logout</a>
+             </div>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 sidepan">
+                <p class="sidemenu">ADD CATEGORY</p>
+                <p class="sidemenu">ADD PROPERTY</p>
+                <p class="sidemenu">ADD PROPERTY IMAGE</p>
+            </div>
+            <div class="col-sm-10">
+                <div ng-view></div>
+            </div>
+        </div>
+
+       
+
+    </body>
+
+     <!--script-->
+     
+     
+   
+    
+      <!--script ends-->
+      <script src="angular-ui-carousel/angular-ui-carousel/dist/ui-carousel.js"></script>
+      <script src="angular-ui-carousel/angular-ui-carousel/dist/ui-carousel.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+      
+  
+      <!--script ends-->
+</html>

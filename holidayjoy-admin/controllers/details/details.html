@@ -1,0 +1,202 @@
+<div ng-init="init()">
+    <search></search>
+    <!--<div class="col-sm-12" style="padding:0px;position:fixed;right:0px;top:132px;">
+         <div ng-init="fixedmap()">
+                <div id="fmap"></div>
+            </div>
+    </div>-->
+    <div class="row" style="margin-top:132px;">
+        <div class="col-sm-8">
+                 <div style="top:132px;width:100%;height:450px;">  
+                    <div  class="carousel slide myCarousel" data-ride="carousel" style="height:100%">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" style="height:100%">
+                            <div class="item active" style="height:100%">
+                                <img src="image/1.jpg" alt="image not available" style="height:100%;width:100%;">
+                            </div>
+
+                            <div class="item" style="height:100%">
+                                <img src="image/2.jpg" alt="image not available" style="height:100%;width:100%;">
+                            </div>
+                        
+                            <div class="item" style="height:100%">
+                                <img src="image/3.jpg" alt="image not available" style="height:100%;width:100%;">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href=".myCarousel" data-slide="prev" style="background:none;">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href=".myCarousel" data-slide="next" style="background:none;">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    </div>
+            <p class="zoombut" data-toggle="modal" data-target="#zoommodal" title="click to enlarge">&#x2723</p> 
+        </div>
+        <div class="col-sm-4">
+            <div class="propdetail">
+                <p style="margin-top: 15px;margin-bottom: 0px !important;"><span class="propdetailprice">Rs 2500 </span>/night</p>
+                <p class="nomargin">Chapra, Bihar</p>
+                <hr style="margin-right: 20px;"/>
+            
+                <div class="form" style="margin-bottom: 10px">
+                    <label for="check_in_date">Check In Date</label><br/>
+                    <input type="date" class="form-control2"/><br/>
+                    <label for="check_out_date">Check Out Date</label><br/>
+                    <input type="date" class="form-control2"/><br/>
+                    <label for="no_of_guest">No Of Guest</label><br/>
+                    <input type="number" class="form-control2" min="1" value="1"/><br/>
+                    <label for="no_of_guest">Total : </label><span class="propdetailprice">Rs 2500 /-</span>
+                    <hr style="margin-right: 20px;"/>
+                    <button class="btn btn-danger" style="width: 95%">Request Booking </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <ul class="propdetailsbreak">
+        <li><a ng-click="scrollTo('OverView')">OverView</a></li><span class="listspace">.</span>
+        <li><a ng-click="scrollTo('Reviews')">Reviews</a></li><span class="listspace">.</span>
+        <li><a ng-click="scrollTo('Host')">The Host</a></li><span class="listspace">.</span>
+        <li><a ng-click="scrollTo('Location')">Location</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div id="OverView" class="propdesc">
+        <h2>Overview</h2>
+        <p>The is a beach facing location with 4 BHK,perfect location to chill with your friends and family</p>
+        <p>1.details</p>
+        <p>2.details</p>
+        <p>3.details</p>
+        <p>1.details</p>
+        <p>2.details</p>
+        <p>3.details</p>
+        <p>1.details</p>
+        <p>2.details</p>
+        <p>3.details</p>
+    </div>
+    <hr>
+    <div id="Reviews" class="propdesc">
+        <h2>Reviews</h2>
+        <div>            
+            <p>Ashish Kumar</p>
+            <p>27<sup>th</sup> Nov 2017</p>
+            Rating:<span ng-repeat="rating in ratings">
+            <div star-rating rating-value="rating.current" max="rating.max"></div>
+            </span>
+            <p>wonderful man mohit,our host .behaved very good and also made us aquinted with the local surrounding</p>
+            <hr>
+        </div>
+        <div>            
+            <p>zaheer khan</p>
+            <p>27<sup>th</sup> Nov 2017</p>
+            Rating:<span ng-repeat="rating in ratings">
+            <div star-rating rating-value="rating.current" max="rating.max"></div>
+            </span>
+            <p>wonderful man mohit,our host .behaved very good and also made us aquinted with the local surrounding</p>
+            <hr>
+        </div>
+        <div>            
+            <p>upender singh Chauhan</p>
+            <p>27<sup>th</sup> Nov 2017</p>
+            Rating:<span ng-repeat="rating in ratings">
+            <div star-rating rating-value="rating.current" max="rating.max"></div>
+            </span>
+            <p>wonderful man mohit,our host .behaved very good and also made us aquinted with the local surrounding</p>
+            <hr>
+        </div>
+        <ul class="pagination">
+            <li><a>Previous</a></li>
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+            <li><a>Next</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div id="Host" class="propdesc">
+      <h2>The Host</h2>
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="col-sm-6">
+                <h3>ASHISH KUMAR</h3>
+                <p>Chapra,bihar</p>
+                <h4>verfied host</4>
+              </div>
+                <div class="col-sm-6">
+                    <img class="img-circle" src="image/cal.png" alt="no pofile pic"/>
+              </div>
+          </div>
+          <div class="col-sm-6">
+            
+          </div>
+      </div>
+      <p style="text-align: justify;">the user is know as one of the best host in our client,adsda  dsaa dsfa sdfs dsfds fsdfdx fsdfds adsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfdsadsda  dsaa dsfa sdfs dsfds fsdfdx fsdfds </p>
+      
+    </div>
+    <hr>
+    <div id="Location" class="propdesc">
+      <div class="col-sm-12">
+            <div ng-init="fixedmap()">
+                <div id="fmap"></div>
+             </div>
+        </div>
+    </div>
+
+        <div id="zoommodal" class="modal fade" role="dialog" >
+            <div class="modal-dialog" style="width:90%;height:90%">
+                <button class="closebut" data-dismiss="modal">&times;</button>
+                <div class="modal-content" style="height: 100%">
+                    
+                    <div class="modal-body" style="height: 100%">
+                      <div class="carousel slide article-slide" id="article-photo-carousel" style="height: 100%">
+                         <!-- Wrapper for slides -->
+                         <div class="carousel-inner cont-slider" style="height: 100%">
+                                 <div class="item active" style="height: 100%">
+                                    <img alt="" title="" src="image/1.jpg" style="width:100%;height:100%">
+                                    </div>
+                                    <div class="item" style="height: 100%">
+                                    <img alt="" title="" src="image/2.jpg" style="width:100%;height:100%">
+                                    </div>
+                                    <div class="item" style="height: 100%">
+                                    <img alt="" title="" src="image/3.jpg" style="width:100%;height:100%">
+                                    </div>
+                                    <div class="item" style="height: 100%">
+                                    <img alt="" title="" src="image/3.jpg" style="width:100%;height:100%">
+                                </div>
+                            </div>
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li class="active" data-slide-to="0" data-target="#article-photo-carousel">
+                                <img alt="" src="image/1.jpg">
+                                </li>
+                                <li class="" data-slide-to="1" data-target="#article-photo-carousel">
+                                <img alt="" src="image/2.jpg">
+                                </li>
+                                <li class="" data-slide-to="2" data-target="#article-photo-carousel">
+                                <img alt="" src="image/3.jpg">
+                                </li>
+                                <li class="" data-slide-to="3" data-target="#article-photo-carousel">
+                                <img alt="" src="image/3.jpg">
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+</div>

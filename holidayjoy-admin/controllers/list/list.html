@@ -1,0 +1,71 @@
+<div ng-init="init()" class="list_screen">
+    <search></search>
+    <div class="col-sm-8 col-xs-12">
+        <div class="col-sm-12">
+            <div class="row" style="padding:15px;margin:0px;">
+                <div style="float:left;">
+                    <div class="filter_menu" ng-click="list_type(1)"><i class="fa fa-table" aria-hidden="true" id="1"><label for="1"> Grid View</label></i></div>
+                    <div class="filter_menu" ng-click="list_type(2)"><i class="fa fa-list-alt" aria-hidden="true" id="2"><label for="2"> List View</label></i></div>
+                </div>
+                <div style="float:right;">
+                    <div class="filter_menu" ng-click="list_type(2)"><i class="fa fa-filter" aria-hidden="true" id="2"><label for="2">Filter</label></i></div>
+                </div>
+            </div>
+        </div>
+             
+        <div class="row">
+            <div class="col-sm-12" ng-if="listtype==1">
+                <div class="col-md-6 col-sm-12" ng-repeat="prop in searchProperties" style="margin-bottom:10px;padding:0px 5px;">
+                    <div class="card" style="border:1px solid lightgray;display:inline-block;">
+                        <img class="card-img-top" src="image/2.jpg" style="width:100%;">
+                        <div class="card-block listpad">
+                            <h4 class="card-title listpad" style="margin:0px;padding-bottom:0px;">holiday</h4>
+                            <div class="meta listpad">
+                                <p style="font-size:12px;margin:0px;">Chapra, Bihar</p>
+                            </div>
+                            <div class="card-text listpad" style="padding-top:0px;padding-bottom:0px;">
+                                <div> <span ng-repeat="rating in ratings">
+        <div star-rating rating-value="rating.current" max="rating.max"></div>
+        </span>
+    </div>
+                            </div>
+                        </div>
+                        <div class="card-footer listpad"  style="padding-top:0px;padding:5px;float:left;">
+                            <p class="float-right" style="margin:0;padding:0px;padding-left:5px;">&#8377; 2500 / night</p>
+                            <p style="margin:0px;padding-left:5px;"><i class=""></i>1 bedroom / 2 guest</p>
+                            <p class="float-right" style="margin:0;padding:0px;padding-left:5px;">&#8377; 1250 / person</p>
+                        </div>
+                        <div style="float:right;padding-right:10px;margin-top:20px;">
+                            <button style="background:#1e8a8a;border-radius: 5px;padding: 5px 25px;color:white;">View</button>
+                        </div>
+                    </div>
+                </div>
+                 
+            </div>
+
+            <div class="col-sm-12" ng-if="listtype==2">
+                <div class="col-xs-12" ng-repeat="prop in searchProperties">
+                   <div class="col-sm-4">
+                       <img src="image/1.jpg" style="width:100%" alt="property image not available"/>
+                   </div>
+                   <div class="col-sm-8">
+                     <p>OWNER         : ASHISH KUMAR</p>
+                     <p>Property Name : Juhu beach</p>
+                     <p>Details       : The is a beach facing location with 4 BHK,perfect location to chill with your friends and family</p>
+                     <p>started from  : 11/12/2017</p>
+                     <button class="btn btn-primary" style="float:right;margin-bottom: 2px;">view</button>
+                  </div>
+                   
+               </div>
+                 
+            </div>
+            
+    </div>
+</div>
+<div class="col-sm-4" style="padding:0px;position:fixed;right:0px;top:132px;">
+    <div ng-init="movingmap()">
+                <div id="map"></div>
+            </div>
+</div>
+</div>
+  
